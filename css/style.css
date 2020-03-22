@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/background.jpg);
+    background-size: auto;
+    background-position: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.freeze {
+    pointer-events: none;
+}
+
+.wrapper {
+    height: 600px;
+    width: 600px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(207, 91, 207, 0.308);
+}
+
+#result {
+    height: 30px;
+    font-size: 24px;
+    color: green;
+    animation: rainbow 2s steps(36) infinite;
+}
+
+@keyframes rainbow {
+    from{ filter: hue-rotate(0deg); }
+    to  { filter: hue-rotate(360deg); }
+}
+
+#resetBtn {
+    width: 400px;
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(151, 54, 151, 0.658);
+    border: 5px double #000;
+    border-radius: 10px;
+    outline: none;
+
+    cursor: pointer;
+}
+
+#resetBtn:hover {
+    background-color: rgba(187, 63, 187, 0.658);
+}
+
+.grid-container {
+    height: 500px;
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.cell {
+    height: 100%;
+    width: 100%;
+    border: 5px solid rgb(239, 197, 247);
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    color: transparent;
+    cursor: pointer;
+}
+
+
+.playerHuman {
+    background-color: blue;
+    animation: colorchangeHu 0.2s;
+}
+
+@keyframes colorchangeHu {
+    from { background-color: #000; }
+    to   { background-color: blue; }
+}
+
+.playerComputer {
+    background-color: red;
+    animation: colorchangeComp 3s;
+}
+
+@keyframes colorchangeComp {
+    from { background-color: #000; }
+    to   { background-color: red; }
+}
+
+
