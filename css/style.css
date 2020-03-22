@@ -76,7 +76,7 @@ body {
 .cell {
     height: 100%;
     width: 100%;
-    border: 5px solid rgb(239, 197, 247);
+    border: 5px solid #fff;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
     color: transparent;
