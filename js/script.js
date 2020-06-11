@@ -87,12 +87,13 @@ function aiPlacement(retrievedNumber) {
     }
 }
 
-cell1.addEventListener('click', function(){
-    if (cell1.classList.contains('playerHuman') || cell1.classList.contains('playerComputer')) {
+for (let i = 0; i < gameBoard.length; i++) {
+    gameBoard[i].addEventListener('click', function(){
+    if (gameBoard[i].classList.contains('playerHuman') || gameBoard[i].classList.contains('playerComputer')) {
         return;
     } else {
-        cell1.classList.add('playerHuman');
-        cell1.innerHTML = '.'
+        gameBoard[i].classList.add('playerHuman');
+        gameBoard[i].innerHTML = '.'
     }
     if (gameOver() == true) {
         return;
@@ -100,116 +101,5 @@ cell1.addEventListener('click', function(){
         getRandomNumber();
     }
 })
-
-cell2.addEventListener('click', function(){
-    if (cell2.classList.contains('playerHuman') || cell2.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell2.classList.add('playerHuman');
-        cell2.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell3.addEventListener('click', function(){
-    if (cell3.classList.contains('playerHuman') || cell3.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell3.classList.add('playerHuman');
-        cell3.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell4.addEventListener('click', function(){
-    if (cell4.classList.contains('playerHuman') || cell4.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell4.classList.add('playerHuman');
-        cell4.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell5.addEventListener('click', function(){
-    if (cell5.classList.contains('playerHuman') || cell5.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell5.classList.add('playerHuman');
-        cell5.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell6.addEventListener('click', function(){
-    if (cell6.classList.contains('playerHuman') || cell6.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell6.classList.add('playerHuman');
-        cell6.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell7.addEventListener('click', function(){
-    if (cell7.classList.contains('playerHuman') || cell7.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell7.classList.add('playerHuman');
-        cell7.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell8.addEventListener('click', function(){
-    if (cell8.classList.contains('playerHuman') || cell8.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell8.classList.add('playerHuman');
-        cell8.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
-
-cell9.addEventListener('click', function(){
-    if (cell9.classList.contains('playerHuman') || cell9.classList.contains('playerComputer')) {
-        return;
-    } else {
-        cell9.classList.add('playerHuman');
-        cell9.innerHTML = '.'
-    }
-    if (gameOver() == true) {
-        return;
-    } else {
-        getRandomNumber();
-    }
-})
+}
 
